@@ -1,0 +1,20 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/scripts/start.js",
+  "scripts": {
+    "configure": "python ./scripts/install.py",
+    "start": "node ./scripts/start.js",
+    "deploy": "python ./scripts/deploy.py"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "http-proxy": "^1.18.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  }
+}

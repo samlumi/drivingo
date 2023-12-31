@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('./baloo2.ttf');
+}
+
+:root {
+  --primary: #F56200;
+  --secondary: #391700;
+  --background: #271406;
+  --dark: #512100;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+html,
+body {
+  font-family: 'Baloo 2';
+  font-weight: bold;
+  scroll-behavior: smooth !important;
+}
+
+.font-primary {
+  font-family: 'Baloo 2';
+}
+
+
+/*  Additional tailwind styles  */
+
+.text-stroke-4 {
+  -webkit-text-stroke-width: 4px;
+}
+
+.text-stroke-8 {
+  -webkit-text-stroke-width: 8px;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke-color: white;
+}
+
+.text-stroke-primary {
+  -webkit-text-stroke-color: #F56200;
+}
+
+.text-stroke-none {
+  -webkit-text-stroke-color: none;
+  -webkit-text-stroke-width: 0;
+}
+
+
+/*  Gradient  */
+
+.banner-effect {
+  background: linear-gradient(180deg, rgba(148, 59, 0, 0.70) 10.42%, rgba(53, 53, 53, 0.50) 54.17%, rgba(148, 59, 0, 0.50) 85.42%);
+}
+
+.orange-gradient {
+  filter: blur(64px);
+  background: radial-gradient(rgba(255, 123, 0, 0.2), transparent);
+}
+
+.light-skeleton-gradient {
+  background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+}
+
+.dark-skeleton-gradient {
+  background: linear-gradient(to right, transparent, var(--dark), transparent);
+}
+
+
+/*  Animations  */
+
+.skeleton-anim {
+  animation: skeleton-loader-anim 1.5s infinite;
+}
+
+@keyframes skeleton-loader-anim {
+  0% { left: -100%; }
+  80% { left: 100%; }
+  100% { left: 100%; }
+}

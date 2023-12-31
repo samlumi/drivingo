@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "next/core-web-vitals",
+  "plugins": [
+    "prettier",
+    "unused-imports"
+  ],
+  "rules": {
+    "no-unused-vars": "error",
+    "unused-imports/no-unused-imports": "error",
+    "quotes": ["warn", "double", { "allowTemplateLiterals": true }],
+    "semi": ["warn", "always"],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ]
+  }
+}

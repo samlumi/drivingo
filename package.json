@@ -1,27 +1,32 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
-  "private": true,
+  "name": "website-v2.0-saas",
+  "version": "2.0.0",
+  "description": "The official Drivingo website",
+  "main": "index.ts",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "client:install": "cd client && npm install",
+    "client:dev": "cd client && pnpm dev",
+    "client:build": "cd client && pnpm build",
+    "client:start": "cd client && pnpm start",
+    "server:install": "cd serverless && npm install",
+    "serverless:configure": "cd serverless && python ./scripts/install.py",
+    "serverless:deploy": "cd serverless && python ./scripts/deploy.py",
+    "serverless:start": "cd serverless && npm start",
+    "prepare": "husky install",
+    "pre-commit": "cd client && pnpm lint"
   },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.4"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Driv-lingo/Website.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Driv-lingo/Website/issues"
+  },
+  "homepage": "https://github.com/Driv-lingo/Website#readme",
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "husky": "^8.0.3"
   }
 }
